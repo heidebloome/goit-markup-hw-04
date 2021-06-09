@@ -138,7 +138,8 @@ img {
 
 .nav-list .link,
 .header .contact-list .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 31px;
   /* нижний padding 31 пиксель, потому что 1 пиксель занял border-bottom у хедера */
@@ -156,6 +157,11 @@ img {
 .header .link:hover,
 .header .link:focus {
   color: var(--blue-color);
+}
+
+.contact-list-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* ФУТЕР */
