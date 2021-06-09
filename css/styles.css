@@ -8,6 +8,7 @@
   --white-color-opacity10: rgba(255, 255, 255, 0.1);
   --background-black-color: #2f303a;
   --background-grey-color: #f5f4fa;
+  --background-hero-color: #c4c4c4;
   --border-header-color: #ececec;
   --social-icons-color: #afb1b8;
 }
@@ -17,6 +18,10 @@ body {
   font-style: normal;
   font-weight: 400;
   color: var(--text-grey-color);
+}
+
+.icon {
+  fill: currentColor;
 }
 
 /* Сброс стилей по умолчанию от браузеров */
@@ -152,10 +157,6 @@ img {
   color: var(--heading-black-color);
 }
 
-.contact-list .link {
-  color: inherit;
-}
-
 .nav-list .current-page,
 .header .link:hover,
 .header .link:focus {
@@ -164,7 +165,6 @@ img {
 
 .contact-list-icon {
   margin-right: 10px;
-  fill: currentColor;
 }
 
 /* ФУТЕР */
@@ -174,9 +174,9 @@ img {
 }
 
 .footer .container {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
 }
 
 .address-box {
@@ -212,13 +212,14 @@ img {
   margin-bottom: 9px;
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.address-box .link:hover,
+.address-box .link:focus {
   color: var(--blue-color);
 }
 
 .social-links-box .title {
   margin-bottom: 20px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -228,13 +229,27 @@ img {
   color: var(--white-color);
 }
 
-.social-links-box .social-icons-link {
+.social-icons-list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
   background-color: var(--white-color-opacity10);
   color: var(--white-color);
 }
 
-.social-links-box .social-icons {
-  fill: currentColor;
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--blue-color);
 }
 
 /* СТРАНИЦА СТУДИЯ */
@@ -245,7 +260,11 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: var(--background-black-color);
+  background-color: var(--background-hero-color);
+  background-image: url('../images/background.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hero .container {
@@ -429,7 +448,7 @@ img {
   margin-right: 10px;
 }
 
-.social-icons-link {
+/* .social-icons-link {
   width: 100%;
   height: 100%;
   background-color: var(--white-color);
@@ -451,7 +470,7 @@ img {
 .social-icons-link:focus .social-icons {
   background-color: var(--blue-color);
   fill: var(--white-color);
-}
+} */
 
 /* секция "наши клиенты" */
 
