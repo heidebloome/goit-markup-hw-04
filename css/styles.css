@@ -22,6 +22,7 @@ body {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .list {
@@ -258,10 +259,12 @@ img {
 /* секция "наши преимущества" */
 /* секция "чем мы занимаемся" */
 /* секция "наша команда" */
+/* секция "наши клиенты" */
 
 .advantages .title,
 .our-works .title,
-.our-team .title {
+.our-team .title,
+.our-clients .title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -401,6 +404,8 @@ img {
 .social-icons-link {
   width: 100%;
   height: 100%;
+  background-color: var(--white-color);
+  border: 0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -418,6 +423,45 @@ img {
 .social-icons-link:focus .social-icons {
   background-color: var(--blue-color);
   fill: var(--white-color);
+}
+
+/* секция "наши клиенты" */
+
+.our-clients-list {
+  display: flex;
+}
+
+.our-clients-item {
+  border: 1px solid var(--social-icons-color);
+  border-radius: 4px;
+  height: 92px;
+  flex-basis: calc((100% - 150px) / 6);
+}
+
+.our-clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-clients-item:hover,
+.our-clients-item:focus {
+  border: 1px solid var(--blue-color);
+}
+
+.our-clients-item:hover .clients-icon {
+  fill: var(--blue-color);
+}
+
+.our-clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--social-icons-color);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 /* СТРАНИЦА ПОРТФОЛИО */
