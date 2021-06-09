@@ -8,6 +8,7 @@
   --background-black-color: #2f303a;
   --background-grey-color: #f5f4fa;
   --border-header-color: #ececec;
+  --social-icons-color: #afb1b8;
 }
 
 body {
@@ -359,6 +360,10 @@ img {
 
 .our-team-list-content {
   padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .our-team-list-content .subtitle,
@@ -374,6 +379,45 @@ img {
 
   font-weight: 500;
   color: var(--heading-black-color);
+}
+
+.our-team-list-content .description {
+  margin-bottom: 16px;
+}
+
+.social-icons-list {
+  display: flex;
+}
+
+.social-icons-list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-icons-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--social-icons-color);
+}
+
+.social-icons {
+  fill: currentColor;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus,
+.social-icons-link:hover .social-icons,
+.social-icons-link:focus .social-icons {
+  background-color: var(--blue-color);
+  fill: var(--white-color);
 }
 
 /* СТРАНИЦА ПОРТФОЛИО */
