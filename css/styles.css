@@ -1,14 +1,16 @@
 :root {
-  --heading-black-color: #212121;
-  --text-grey-color: #757575;
-  --blue-color: #2196f3;
-  --logo-black-color: #000000;
+  --heading-text-color: #212121;
+  --main-text-color: #757575;
+  --accent-color: #2196f3;
+  --hero-button-hover-color: #188ce8;
+  --black-color: #000000;
   --white-color: #ffffff;
   --white-color-opacity60: rgba(255, 255, 255, 0.6);
   --white-color-opacity10: rgba(255, 255, 255, 0.1);
   --background-black-color: #2f303a;
   --background-grey-color: #f5f4fa;
   --background-hero-color: #c4c4c4;
+  --background-gradient-color: rgba(47, 48, 58, 0.4);
   --border-header-color: #ececec;
   --social-icons-color: #afb1b8;
 }
@@ -17,11 +19,7 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: var(--text-grey-color);
-}
-
-.icon {
-  fill: currentColor;
+  color: var(--main-text-color);
 }
 
 /* Сброс стилей по умолчанию от браузеров */
@@ -54,7 +52,7 @@ img {
   height: auto;
 }
 
-/* Общие стили для контейнера и секции */
+/* Общие стили */
 
 .container {
   width: 1200px;
@@ -66,6 +64,10 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.icon {
+  fill: currentColor;
 }
 
 /* Скрытые заголовки */
@@ -90,11 +92,11 @@ img {
   line-height: 1.1923;
   letter-spacing: 0.03em;
 
-  color: var(--blue-color);
+  color: var(--accent-color);
 }
 
 .logo-header {
-  color: var(--logo-black-color);
+  color: var(--black-color);
 }
 
 .logo-footer {
@@ -154,13 +156,13 @@ img {
 }
 
 .nav-list .link {
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
 }
 
 .nav-list .current-page,
 .header .link:hover,
 .header .link:focus {
-  color: var(--blue-color);
+  color: var(--accent-color);
 }
 
 .contact-list-icon {
@@ -214,7 +216,7 @@ img {
 
 .address-box .link:hover,
 .address-box .link:focus {
-  color: var(--blue-color);
+  color: var(--accent-color);
 }
 
 .social-links-box .title {
@@ -249,7 +251,7 @@ img {
 
 .social-icons-link:hover,
 .social-icons-link:focus {
-  background-color: var(--blue-color);
+  background-color: var(--accent-color);
 }
 
 /* СТРАНИЦА СТУДИЯ */
@@ -260,7 +262,10 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      var(--background-gradient-color),
+      var(--background-gradient-color)
+    ),
     url(../images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -297,9 +302,14 @@ img {
   letter-spacing: 0.06em;
 
   color: var(--white-color);
-  background-color: var(--blue-color);
+  background-color: var(--accent-color);
 
   cursor: pointer;
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  background-color: var(--hero-button-hover-color);
 }
 
 /*  ЗАГОЛОВКИ СЕКЦИЙ */
@@ -320,7 +330,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
 }
 
 /* секция "наши преимущества" */
@@ -356,7 +366,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
 }
 
 .advantages-list .description {
@@ -428,7 +438,7 @@ img {
   margin-bottom: 10px;
 
   font-weight: 500;
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
 }
 
 .our-team-list-content .description {
@@ -468,7 +478,7 @@ img {
 .social-icons-link:focus,
 .social-icons-link:hover .social-icons,
 .social-icons-link:focus .social-icons {
-  background-color: var(--blue-color);
+  background-color: var(--accent-color);
   fill: var(--white-color);
 } */
 
@@ -491,11 +501,11 @@ img {
 
 .our-clients-item:hover,
 .our-clients-item:focus {
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--accent-color);
 }
 
 .our-clients-item:hover .clients-icon {
-  fill: var(--blue-color);
+  fill: var(--accent-color);
 }
 
 .our-clients-link {
@@ -537,7 +547,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
   background-color: var(--background-grey-color);
 
   cursor: pointer;
@@ -547,7 +557,7 @@ img {
 .button:hover,
 .button:focus {
   color: var(--white-color);
-  background-color: var(--blue-color);
+  background-color: var(--accent-color);
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -581,7 +591,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
 
-  color: var(--heading-black-color);
+  color: var(--heading-text-color);
 }
 
 .portfolio-list-content .description {
